@@ -1,6 +1,5 @@
-import AddCategory from "./components/AddCategory";
 import React, { useState } from "react";
-import GifGrid from "./components/GifGrid";
+import { AddCategory, GifGrid } from "./components";
 
 const GifApp = () => {
   const [categories, setCategories] = useState(["Mountains"]);
@@ -17,14 +16,9 @@ const GifApp = () => {
 
       <AddCategory addCategory={addCategory} />
 
-      {
-        categories.map((cat) => (
-          <GifGrid 
-            key={cat} 
-            category={cat} 
-            />
-        ))
-      }
+      {categories.map((cat) => (
+        <GifGrid key={cat} category={cat} />
+      ))}
     </>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const AddCategory = (props) => {
-  const { addCategory } = props;
+export const AddCategory = ({ addCategory }) => {
   const [inputCat, setInputCat] = useState("");
 
   const onInputChange = (e) => {
@@ -26,6 +25,3 @@ const AddCategory = (props) => {
   );
 };
 
-
-
-export default AddCategory;
