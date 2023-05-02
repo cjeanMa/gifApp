@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import GifGrid from "./components/GifGrid";
 
 const GifApp = () => {
-  const [categories, setCategories] = useState(["Mountains", "Sunset"]);
+  const [categories, setCategories] = useState(["Mountains"]);
 
   const addCategory = (newCategory) => {
     if (categories.includes(newCategory)) return;
 
-    setCategories([...categories, newCategory]);
+    setCategories([newCategory, ...categories]);
   };
 
   return (
@@ -17,9 +17,14 @@ const GifApp = () => {
 
       <AddCategory addCategory={addCategory} />
 
-      {categories.map((cat) => (
-        <GifGrid key={cat} category={cat} />
-      ))}
+      {
+        categories.map((cat) => (
+          <GifGrid 
+            key={cat} 
+            category={cat} 
+            />
+        ))
+      }
     </>
   );
 };
