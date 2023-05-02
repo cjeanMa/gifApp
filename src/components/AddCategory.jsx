@@ -22,7 +22,6 @@ const AddCategory = (props) => {
         value={inputCat}
         onChange={onInputChange}
       />
-      <button>Add</button>
     </form>
   );
 };

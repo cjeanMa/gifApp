@@ -13,7 +13,7 @@ const GifApp = () => {
 
   return (
     <>
-      <div>GifApp</div>
+      <h1>GifApp</h1>
 
       <AddCategory addCategory={addCategory} />
 
